@@ -1,0 +1,15 @@
+<div>
+  <div class="row centered">
+    <div class="col col-6">
+      <h2>SSL pricelist</h2>
+      <table *ngIf="pricelist">
+        <tbody>
+          <tr *ngFor="let item of pricelist">
+            <td><a>{{ item.name }}</a></td>
+            <td> от {{ item.price.period[0].cost }} {{ item.price.currency }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

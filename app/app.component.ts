@@ -1,7 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import { AppService } from './app.service';
 
 @Component({
   selector: 'my-app',
-  template: `<h1>Hello {{name}}</h1>`,
+  templateUrl: './app/app.component.html',
 })
-export class AppComponent  { name = 'Angular'; }
+
+export class AppComponent implements OnInit  {
+  constructor(private appService: AppService) {}
+
+  pricelist: any;
+
+  ngOnInit() {
+    this.appService.getPriceList().subscribe(d => {
+      this.pricelist = d.pricelist;
+    });
+  }
+
+
+}
