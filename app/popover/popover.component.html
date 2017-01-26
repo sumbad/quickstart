@@ -1,0 +1,13 @@
+<div class="popover {{_popoverClassPlacement}}" [class.popover-hidden]="_isHidden" [style.left.px]="_position?.left" [style.top.px]="_position?.top">
+    <div class="popover-content">
+        <div class="popover-arrow"></div>
+        <div class="popover-inner">
+            <div #popoverDiv>
+                <div class="popover-title"><span>{{_priceName}}</span></div>
+                <div class="popover-inner-content">
+                    <div [innerHtml]="_priceDescriptionInnerHtml"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,113 @@
+.popover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999999999999;
+  cursor: auto;
+  user-select: text;
+  white-space: normal;
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: normal;
+  text-align: left;
+  transform-origin: 0px 4px 0px;
+}
+
+
+.popover:after {
+    content: "";
+    position: absolute;
+    background: rgba(255, 255, 255, 0.01);
+}
+
+.popover-hidden {
+    display: none;
+}
+
+.popover-placement-bottomLeft {
+    padding-top: 4px;
+}
+
+.popover-inner {
+    background-color: #fff;
+    background-clip: padding-box;
+    border-radius: 4px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+}
+
+.popover-title {
+    min-width: 177px;
+    margin: 0;
+    padding: 0 16px;
+    line-height: 32px;
+    height: 32px;
+    border-bottom: 1px solid #e9e9e9;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.popover-inner-content {
+    padding: 8px 16px;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.popover-placement-topLeft {
+    padding-bottom: 4px;
+}
+
+
+/* Arrows */
+.popover-arrow, .popover-arrow:after {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+}
+
+.popover-arrow {
+    border-width: 5px;
+}
+
+.popover-arrow:after {
+    border-width: 5px;
+    content: "";
+}
+
+.popover-placement-bottomLeft > .popover-content >  .popover-arrow {
+    border-top-width: 0;
+    border-bottom-color: rgba(217, 217, 217, 0.7);
+    top: -1px;
+}
+
+.popover-placement-bottomLeft > .popover-content >  .popover-arrow:after {
+    content: " ";
+    top: 1px;
+    margin-left: -4px;
+    border-top-width: 0;
+    border-bottom-color: #fff;
+}
+
+
+.popover-placement-bottomLeft > .popover-content >  .popover-arrow {
+    left: 16px; 
+}
+
+
+.popover-placement-topLeft > .popover-content >  .popover-arrow {
+    border-bottom-width: 0;
+    border-top-color: rgba(217, 217, 217, 0.7);
+    bottom: -1px;
+}
+
+.popover-placement-topLeft > .popover-content >  .popover-arrow:after {
+    content: " ";
+    bottom: 1px;
+    margin-left: -4px;
+    border-bottom-width: 0;
+    border-top-color: #fff;
+}
+
+.popover-placement-topLeft > .popover-content >  .popover-arrow {
+    left: 16px;
+}

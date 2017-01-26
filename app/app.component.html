@@ -2,10 +2,11 @@
   <div class="row centered">
     <div class="col col-6">
       <h2>SSL pricelist</h2>
+      <popover [position]="positionPopover" [price]="overedPrice"></popover>
       <table *ngIf="pricelist">
         <tbody>
           <tr *ngFor="let item of pricelist">
-            <td><a>{{ item.name }}</a></td>
+            <td><a (mouseover)="openPopover($event, item)" (mouseout)="closePopover($event)" style="cursor: pointer">{{ item.name }}</a></td>
             <td> от {{ item.price.period[0].cost }} {{ item.price.currency }}</td>
           </tr>
         </tbody>
